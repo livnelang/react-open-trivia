@@ -1,0 +1,20 @@
+{
+    "categories": [
+        {
+            "id": 21,
+            "name": "Sports"
+        },
+        {
+            "id": 26,
+            "name": "Celebrities"
+        },
+        {
+            "id": 27,
+            "name": "Animals"
+        },
+        {
+            "id": 23,
+            "name": "History"
+        }
+    ]
+}
