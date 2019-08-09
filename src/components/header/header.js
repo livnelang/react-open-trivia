@@ -27,11 +27,11 @@ export default class Header extends PureComponent {
     render() {
         return (
             <div className="topPanel flexColumnCenter">
-                <GitHubLinkBox>
+                <GitHubLinkBox onClick={() =>window.open("https://github.com/livnelang/react-open-trivia", "_blank")}>
                     <FaGithub size={30} />
                 </GitHubLinkBox>
                 <Wrapper>
-                    <Title>Trivia time!</Title>
+                    <Title>Trivia time! </Title>
                     <p>Go on, start by selecting your category!</p>
                 </Wrapper>
             </div>
