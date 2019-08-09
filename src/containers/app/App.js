@@ -1,14 +1,23 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import './App.css';
 import Header from "../../components/header/header"
 import Main from "../../components/main/main"
 
-export default class App extends PureComponent {
+export default class App extends React.Component {
+
+  componentWillMount() {
+
+  }
+
+
+
+
+
 
 
   render() {
     return (
-      <div className="wrapper flexColumnCenter">
+      <div id="wrapper" className="flexColumnCenter">
         <Header />
         <Main />
       </div>

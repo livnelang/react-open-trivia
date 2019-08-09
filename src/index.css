@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: Cairo-ExtraLight;
+    src: url(fonts/Cairo-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Cairo-Regular;
+    src: url(fonts/Cairo-Regular.ttf);
+}
+
 body {
-    background: #33b6fa !important;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
+    background: rgb(249, 222, 86);
 }
 
 .flexColumnCenter {
