@@ -20,6 +20,10 @@ const Title = styled.h1`
     font-weight: 500;
     margin: 0;
     max-height: 180px;
+
+    @media (max-width: 520px) {
+        font-size: 80px;
+      }
 `;
 
 export default class Header extends PureComponent {
