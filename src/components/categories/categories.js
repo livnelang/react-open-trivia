@@ -2,9 +2,13 @@ import React, { PureComponent } from "react";
 import './categories.css';
 import jsonData from './categories.json';
 import axios from 'axios';
+import { connect } from "react-redux";
+import { setQuestions } from "../../actions/index";
 
 
-export default class Categories extends PureComponent {
+
+
+class Categories extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,12 +16,12 @@ export default class Categories extends PureComponent {
             categories: jsonData.categories,
             cardsColors: ['indianred', 'cornflowerblue', 'cadetblue', 'lightcoral']
         };
+
     }
 
     categoryClick(value) {
         console.log('category click');
         this.fetchQuestions(value);
-        // this.props.history.push('/questions');
     }
 
     fetchQuestions(catergoryId) {
@@ -27,6 +31,15 @@ export default class Categories extends PureComponent {
 
         axios.get(triviaUrl)
             .then((response) => {
+                if (response.data && response.data.results) {
+                    this.props.setQuestions(response.data.results);
+                    //todo: go to questions page
+                    this.props.history.push('/questions');
+                }
+
+
+
+
 
             })
             .catch((error) => {
@@ -49,3 +62,21 @@ export default class Categories extends PureComponent {
     }
 
 }
+
+
+// const mapStateToProps = (state) => {
+//     return {
+//         showGuessResult: state.showGuessResult,
+//         score: state.score,
+//         userFinishedGame: state.userFinishedGame
+//     };
+// };
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setQuestions: questions => dispatch(setQuestions(questions)),
+    };
+};
+
+export default connect(null, mapDispatchToProps)(Categories);

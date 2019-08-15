@@ -17,11 +17,7 @@ export default class Main extends PureComponent {
                     <Route path="/" exact component={Categories}></Route>
                     <Route path="/questions" component={Questions}></Route>
                 </Switch>
-
-
             </Router>
-
-
         );
     }
 
