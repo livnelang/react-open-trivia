@@ -36,11 +36,6 @@ class Categories extends PureComponent {
                     //todo: go to questions page
                     this.props.history.push('/questions');
                 }
-
-
-
-
-
             })
             .catch((error) => {
                 console.log(error);

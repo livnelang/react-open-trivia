@@ -4,7 +4,8 @@ import {  SET_QUESTIONS  } from "../constants/index";
 
 const initialState = {
     score: 0,
-    questions: []
+    questions: [],
+    currentQuestion: 0
 };
 
 function rootReducer(state = initialState, action) {
