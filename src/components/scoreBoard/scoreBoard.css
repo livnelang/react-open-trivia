@@ -1,0 +1,8 @@
+.scoreBoard {
+    position: absolute;
+    top: 250px;
+}
+
+.scoreBox p {
+    margin: 0;
+}

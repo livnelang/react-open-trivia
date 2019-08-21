@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import './questions.css';
 import { connect } from "react-redux";
 import Question from "../question/question";
+import ScoreBoard from "../scoreBoard/scoreBoard";
 
 
 class Questions extends PureComponent {
@@ -9,9 +10,9 @@ class Questions extends PureComponent {
 
     render() {
         return (
-            <div>
-                {/* <p>Questions page!</p> */}
+            <div className="questionsContainer flexColumnCenter">
                 <Question />
+                <ScoreBoard />
             </div>
         );
     }

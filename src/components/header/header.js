@@ -36,7 +36,7 @@ export default class Header extends PureComponent {
                 </GitHubLinkBox>
                 <Wrapper>
                     <Title>Trivia time! </Title>
-                    <p>Go on, start by selecting your category!</p>
+                    {/* <p>Go on, start by selecting your category!</p> */}
                 </Wrapper>
             </div>
         );

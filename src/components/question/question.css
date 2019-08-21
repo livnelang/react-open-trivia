@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.questionContainer p {
+    max-width: 70%;
+}
+
 .questionContainer .answersContainer {
     display: grid;
     grid-gap: 20px;
@@ -17,9 +21,10 @@
     align-items: center;
     min-width: 200px;
     min-height: 50px;
-    border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
+    background: whitesmoke;
+    box-shadow: 2px 2px 6px 0px #666;
 }
 
 .questionContainer .answersContainer .answerBox:hover {
