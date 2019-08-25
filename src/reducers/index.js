@@ -1,4 +1,4 @@
-import {  SET_QUESTIONS, INCREMENT_SCORE, SET_QUESTION_COUNTER  } from "../constants/index";
+import { SET_QUESTIONS, INCREMENT_SCORE, SET_QUESTION_COUNTER, RESET_GAME } from "../constants/index";
 
 
 
@@ -27,6 +27,11 @@ function rootReducer(state = initialState, action) {
     if (action.type === INCREMENT_SCORE) {
         return Object.assign({}, state, {
             score: state.score + 1
+        });
+    }
+
+    if (action.type === RESET_GAME) {
+        return Object.assign({}, state = initialState, {
         });
     }
 

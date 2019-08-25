@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
-import './question.css';
+import { withRouter } from 'react-router-dom'
 import { connect } from "react-redux";
+import './question.css';
 import { incrementScore, setQuestionCounter } from "../../actions/index";
 
 
@@ -8,18 +9,21 @@ class Question extends PureComponent {
 
 
     onAnswerClick(isCorrect) {
+
         if (isCorrect) {
             this.props.incrementScore();
-            if (!this.userWon()) {
-                this.props.setQuestionCounter();
-            }
+        }
+
+        if (this.gameEnded()) {
+            this.props.history.push('/gameSummary');
+        } else {
+            this.props.setQuestionCounter();
         }
     }
 
-    userWon() {
-        return this.props.currentQuestion >= this.props.questionsLength;
+    gameEnded() {
+        return this.props.currentQuestion >= this.props.questionsLength -1;
     }
-
 
     render() {
         return (
@@ -61,4 +65,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Question);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Question));

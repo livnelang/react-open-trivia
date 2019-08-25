@@ -1,4 +1,7 @@
 export const SET_QUESTIONS = "SET_QUESTIONS";
 export const INCREMENT_SCORE = "INCREMENT_SCORE";
 export const SET_QUESTION_COUNTER = "SET_QUESTION_COUNTER";
+export const RESET_GAME = "RESET_GAME";
+
+
 
